@@ -64,22 +64,40 @@ a {
 .nav li {
     position: relative;
 }
-.nav .li-active::after {
+.nav a {
+    display: block;
+}
+/* .nav a::after {
     position: absolute;
     top: 100%;
-    left: 21px;
+    left: 0px;
     display: block;
     content: "";
     width: 12px;
     height: 2px;
     border-radius: 1px;
     background: #171100
-}
+} */
 .nav .li-active {
     font-family: inherit;
 }
 .nav a:hover {
     font-family: inherit;
+    font-weight: bold;
+}
+.after-nav {
+    position: absolute;
+    top: calc(100% - 24px);
+    left: 21px;
+    display: none;
+    content: "";
+    width: 12px;
+    height: 2px;
+    border-radius: 1px;
+    background: #171100
+}
+.nav a:hover .after-nav{
+    display:block !important;
 }
 /* .nav ul>li>a:hover .li-active::after {
     display: block;
